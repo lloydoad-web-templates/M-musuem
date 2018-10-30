@@ -1,5 +1,5 @@
 {
-  "name": "Myahs Musuem",
+  "name": "server",
   "version": "1.0.0",
   "description": "A personal website",
   "main": "index.js",
@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "Lloydoad",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.5"
+  }
 }
