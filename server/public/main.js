@@ -36,6 +36,20 @@ var app = new Vue({
                     entry: this.textFieldData,
                     date: dateString
                 };
+
+                fetch("/api/make-journal", {
+                    method: "POST",
+                    body: JSON.stringify(newEntry),
+                    headers: {
+                        "content-type": "application/json"
+                    }
+                }).then( response => {
+                    console.log(response);
+                    return response.json;
+                }).then( result => {
+                    console.log(result);
+                });
+
                 this.pastJournals.unshift(newEntry);
             } else if (this.textFieldData !== "" && this.isAddingWishList) {
                 var newEntry = {
